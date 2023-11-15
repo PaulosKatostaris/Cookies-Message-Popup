@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cookies alert popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showModal()">
+<div id="modalbox">
+    <img src="images/cookies.png" class="cookies">
+    <p>Χρησιμοποιούμε cookies για να σας βοηθήσουμε να πλοηγηθείτε αποτελεσματικά και να εκτελέσετε ορισμένες ενέργειες.</p>
+    <button type="button" onclick="closeModal()">Αποδοχή</button>
+    <img src="images/close.png" class="close-icon" onclick="closeModal()">
+</div>
+
+<script>
+    let modalbox = document.getElementById("modalbox");
+
+    function showModal(){
+        setTimeout(() => {
+            modalbox.style.display = "block";
+        }, 2500)
+    }
+    function closeModal(){
+        modalbox.style.display = "none";
+    }
+</script>
+</body>
+</html>
